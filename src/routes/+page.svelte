@@ -1,39 +1,13 @@
 <script lang="ts">
+  import Markdown from "svelte-exmarkdown";
   let writing = ``; 
 </script>
 
 
-<main>
-  <textarea bind:value={writing} />
-  <div id="preview">
-
+<main class="flex flex-row p-8 gap-8 w-screen h-screen justify-center bg-neutral-800">
+  <textarea class="text-white bg-neutral-600 p-8 w-1/2 rounded-lg" bind:value={writing} />
+  <div class="prose prose-invert overflow-auto p-8 w-1/2 h-full bg-neutral-900">
+    <Markdown md={writing} />
   </div>
 </main>
 
-<style>
-  main {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    padding: 3vw;
-    background-color: #171717;
-  }
-
-  textarea {
-    width: 50%;
-    height: 100%;
-    padding: 1rem;
-    color: white;
-    font-size: 20pt;
-    background-color: #404040;
-    border-radius: 0.5rem;
-  }
-
-  #preview {
-    width: 50%;
-    height: 100%;
-    padding: 1rem;
-    color: white;
-  }
-</style>
