@@ -1,38 +1,30 @@
-# create-svelte
+# Scrawl: It's like Wordpress, but ~n e w~
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+### Project Status
+- [ ] Codebase (in progress)
+- [ ] Tutorial (in progress)
 
-## Creating a project
+*GOAL*: To create an all-in-one blogging website, with admin access, using Svelte
+and markdown. In turn, this project will be used as a tutorial for those who are new
+to modern web development to introduce basic concepts and technologies used today for
+full-stack web applications.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features:
+- [x] Markdown editor and Previewer
+- [x] Local Storage and Saving
+- [ ] Database Hosting and Connecting
+- [ ] Authentication for Admin Access
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Markdown Editor and Previewer
+*GOAL*: To show how Javascript and HTML blend together in modern web frameworks
+to create reactive elements, while introducing npm to install packages. Using Svelte,
+TailwindCSS, and svelte-exmarkdown.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Local Storage and Saving
+*GOAL*: To show how to work with data via CRUD methods. Using Svelte stores.
 
-## Developing
+### Database Hosting and Connecting
+*TODO*
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Authentication for Admin Access
+*TODO*

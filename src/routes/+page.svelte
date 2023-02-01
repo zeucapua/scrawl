@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { writings } from "$lib/stores";
   import Markdown from "svelte-exmarkdown";
 
@@ -26,7 +27,6 @@
   }
 
   function saveWriting() {
-    id = id.length === 0 ? crypto.randomUUID() : id;
     const current_writing = { id: id, name: name, content: content };
     if (checkWriting(current_writing)) {
       const others = list.filter((w : Writing) => { return w.id != current_writing.id });
@@ -49,6 +49,10 @@
   function clearWritings() {
     writings.set([]);
   }
+
+  onMount(() => {
+    newWriting();
+  });
 
   $: list = JSON.parse("[" + $writings + "]")
 </script>
